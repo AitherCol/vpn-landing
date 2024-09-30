@@ -1,0 +1,66 @@
+.button {
+	transition-property: var(--notblocknet-transition-property-common) !important;
+	transition-duration: 350ms !important;
+}
+
+.button:active {
+	transform: scale(0.875);
+}
+
+.primary {
+	position: relative;
+	color: #0f0f0f !important;
+}
+
+.primary::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(87deg, #bfffff 0%, #83d0cb 100%);
+	z-index: -1;
+	transition: opacity 350ms ease !important;
+}
+
+.primary:hover::before {
+	opacity: 0;
+}
+
+.primary:hover {
+	background: #1e2525 !important;
+	color: #9ae2df !important;
+}
+
+.primary:active {
+	color: rgba(159, 230, 227, 0.5) !important;
+	background-color: #1e2525 !important;
+}
+
+.default {
+	background: #242424 !important;
+	color: #fff !important;
+}
+
+.default:hover {
+	background: #2e2e2e !important;
+	color: #fff !important;
+}
+
+.default:active {
+	color: rgba(225, 225, 225, 0.5) !important;
+	background-color: #242424 !important;
+}
+
+.arrow {
+	position: absolute; /* Позиционирование обязательно */
+	left: -55px;
+	top: -21px;
+	transition: transform 0.5s ease;
+	transform: translate(0, 0) rotate(15deg); /* Начальная позиция */
+}
+
+.button:hover .arrow {
+	transform: translate(300.065px, 0.989px) rotate(15deg); /* Конечная позиция (рассчитана по разнице координат) */
+}
