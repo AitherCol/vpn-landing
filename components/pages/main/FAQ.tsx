@@ -196,7 +196,13 @@ export default function FAQ() {
 										>
 											Не нашли ответ на нужный вопрос?
 										</Text>
-										<Link color={"#BFFFFF"} fontWeight={500} fontSize={"16px"}>
+										<Link
+											color={"#BFFFFF"}
+											fontWeight={500}
+											fontSize={"16px"}
+											href="https://t.me/NotBlockNetSupportBot"
+											isExternal
+										>
 											Обратитесь в нашу поддержку
 										</Link>
 									</Stack>

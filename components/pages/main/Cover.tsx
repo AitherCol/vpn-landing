@@ -1,5 +1,9 @@
 import CustomButton from "@/components/ui/CustomButton";
-import { getAdaptiveValue } from "@/components/utils";
+import {
+	getAdaptiveValue,
+	openInNewTab,
+	scrollToElement,
+} from "@/components/utils";
 import { ContentContainer, uncageFont } from "@/pages/_app";
 import { Box, Center, Heading, Stack, Text } from "@chakra-ui/react";
 
@@ -106,10 +110,17 @@ export default function Cover() {
 							}
 							spacing={getAdaptiveValue("16px", "16px", "24px")}
 						>
-							<CustomButton width={["full", "auto"]}>
+							<CustomButton
+								onClick={() => scrollToElement("why")}
+								width={["full", "auto"]}
+							>
 								Узнать подробнее
 							</CustomButton>
-							<CustomButton variant="primary" width={["full", "auto"]}>
+							<CustomButton
+								variant="primary"
+								width={["full", "auto"]}
+								onClick={() => openInNewTab("https://t.me/NotBlockNetBot")}
+							>
 								Начать использовать
 							</CustomButton>
 						</Stack>

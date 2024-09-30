@@ -9,12 +9,14 @@ export default function CustomButton({
 	width,
 	display,
 	zIndex,
+	onClick,
 }: {
 	children: React.ReactNode;
 	variant?: "primary" | "default";
 	width?: string | string[];
 	display?: string | string[];
 	zIndex?: number;
+	onClick?: () => void;
 }) {
 	return (
 		<Button
@@ -32,6 +34,7 @@ export default function CustomButton({
 			_hover={{}}
 			_focus={{}}
 			variant={"unstyled"}
+			onClick={onClick}
 		>
 			<Box
 				w="5px"

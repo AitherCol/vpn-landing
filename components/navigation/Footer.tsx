@@ -1,6 +1,6 @@
 import { ContentContainer, uncageFont } from "@/pages/_app";
 import { Center, Heading, Image, Link, Stack, Text } from "@chakra-ui/react";
-import { getAdaptiveValue } from "../utils";
+import { getAdaptiveValue, scrollToElement } from "../utils";
 
 export default function Footer() {
 	return (
@@ -73,6 +73,7 @@ export default function Footer() {
 									fontWeight={400}
 									opacity={"0.7"}
 									_hover={{ opacity: "1" }}
+									onClick={() => scrollToElement("why")}
 								>
 									Почему мы?
 								</Link>
@@ -82,6 +83,7 @@ export default function Footer() {
 									fontWeight={400}
 									opacity={"0.7"}
 									_hover={{ opacity: "1" }}
+									onClick={() => scrollToElement("features")}
 								>
 									Преимущества
 								</Link>
@@ -96,6 +98,7 @@ export default function Footer() {
 									fontWeight={400}
 									opacity={"0.7"}
 									_hover={{ opacity: "1" }}
+									onClick={() => scrollToElement("how")}
 								>
 									Как это работает?
 								</Link>
@@ -105,6 +108,7 @@ export default function Footer() {
 									fontWeight={400}
 									opacity={"0.7"}
 									_hover={{ opacity: "1" }}
+									onClick={() => scrollToElement("faq")}
 								>
 									Частые вопросы
 								</Link>
@@ -144,6 +148,8 @@ export default function Footer() {
 									fontWeight={400}
 									opacity={"0.7"}
 									_hover={{ opacity: "1" }}
+									href="https://t.me/NotBlockNetSupportBot"
+									isExternal
 								>
 									Поддержка
 								</Link>

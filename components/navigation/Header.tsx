@@ -1,6 +1,7 @@
 import { uncageFont } from "@/pages/_app";
 import { Box, Center, Heading, Image, Stack } from "@chakra-ui/react";
 import CustomButton from "../ui/CustomButton";
+import { openInNewTab } from "../utils";
 import NavigationButton from "./NavigationButton";
 
 export default function Header() {
@@ -51,6 +52,7 @@ export default function Header() {
 					</Stack>
 
 					{/* Правый блок */}
+
 					<CustomButton
 						display={[
 							"none",
@@ -62,6 +64,7 @@ export default function Header() {
 						]}
 						variant="primary"
 						zIndex={3}
+						onClick={() => openInNewTab("https://t.me/NotBlockNetBot")}
 					>
 						Начать использовать
 					</CustomButton>
