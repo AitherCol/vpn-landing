@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
 					content="NotBlockNet – это свободный, быстрый и безопасный интернет. Мы предоставляем надёжное и безопасное VPN-решение, которое защитит твою конфиденциальность и откроет доступ к любому контенту, где бы ты ни находился. Одна подписка — полная свобода в интернете."
 				/>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/favicon.png" />
 				<meta
 					name="keywords"
 					content="notblocknet, not block net, нотблокнет нот блок нет, vpn, впн, fast vpn, free vpn, быстрый впн, надёжный впн, впн хесуса, hesus vpn, хесус впн, jesusavgn vpn, notblocknet vpn, нотблокнет впн"
