@@ -43,6 +43,7 @@ function QuestionComponent({
 							textAlign={"start"}
 							_hover={{
 								bgColor: "#191919",
+								color: "#bfffff",
 							}}
 							direction={"column"}
 							spacing={"4px"}
@@ -65,9 +66,9 @@ function QuestionComponent({
 							></Box>
 
 							<Heading
-								className={[
-									isExpanded ? styles["question-expanded"] : undefined,
-								].join(" ")}
+								className={[isExpanded ? styles["question"] : undefined].join(
+									" "
+								)}
 								fontSize={getAdaptiveValue("16px", "18px", "24px")}
 								fontWeight={700}
 								lineHeight={"normal"}

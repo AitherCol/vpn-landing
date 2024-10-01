@@ -15,10 +15,6 @@
 	transform: rotate(180deg);
 }
 
-.button:hover .question {
-	color: #bfffff;
-}
-
 .shadow {
 	transition-property: var(--notblocknet-transition-property-common) !important;
 	transition-duration: 350ms !important;
