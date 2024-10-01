@@ -45,7 +45,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				<link rel="icon" href="/favicon.png" />
 				<meta
 					name="keywords"
-					content="notblocknet, not block net, нотблокнет нот блок нет, vpn, впн, fast vpn, free vpn, быстрый впн, надёжный впн, впн хесуса, hesus vpn, хесус впн, jesusavgn vpn, notblocknet vpn, нотблокнет впн"
+					content="notblocknet, not block net, нотблокнет, нот блок нет, vpn, впн, fast vpn, free vpn, быстрый впн, надёжный впн, впн хесуса, hesus vpn, хесус впн, jesusavgn vpn, впн от хесуса, vpn от хесуса, notblocknet vpn, нотблокнет впн"
 				/>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			</Head>
