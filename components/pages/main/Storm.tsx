@@ -1,3 +1,4 @@
+import { getAdaptiveValue } from "@/components/utils";
 import { uncageFont } from "@/pages/_app";
 import { Box, Heading, Stack, Text } from "@chakra-ui/react";
 
@@ -6,7 +7,8 @@ export default function Storm() {
 		<Box
 			id="why"
 			position="relative"
-			height={["55vh", "100vh"]}
+			height={getAdaptiveValue("auto", "auto", "100vh")}
+			pb={getAdaptiveValue("92px", "113px", "0px")}
 			overflow={"hidden"}
 		>
 			<Box

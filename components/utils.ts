@@ -1,3 +1,5 @@
+import { NextRouter } from "next/router";
+
 export function getAdaptiveValue(
 	phone: string | number,
 	tablet?: string | number,
@@ -6,11 +8,8 @@ export function getAdaptiveValue(
 	return { base: phone, md: tablet, xl: desktop };
 }
 
-export function scrollToElement(elementId: string) {
-	const targetElement = document.getElementById(elementId);
-	if (targetElement) {
-		targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-	}
+export function scrollToElement(elementId: string, router: NextRouter) {
+	router.push(`/#${elementId}`);
 }
 
 export const openInNewTab = (url: string): void => {

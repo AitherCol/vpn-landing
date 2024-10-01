@@ -1,10 +1,14 @@
 import { uncageFont } from "@/pages/_app";
 import { Box, Center, Heading, Image, Stack } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import CustomButton from "../ui/CustomButton";
 import { openInNewTab } from "../utils";
+import MobileNavigation from "./MobileNavigation";
 import NavigationButton from "./NavigationButton";
 
 export default function Header() {
+	const router = useRouter();
+
 	return (
 		<Center
 			padding={["8px 16px", "8px 16px", "8px", "16px", "8px 64px"]}
@@ -35,6 +39,7 @@ export default function Header() {
 						alignItems={"center"}
 						cursor={"pointer"}
 						display={["flex", "flex", "none", "none", "flex", "flex"]}
+						onClick={() => router.push("/")}
 					>
 						<Image src="/logos/icon.svg" w="36px" h="36px" />
 						<Heading
@@ -68,6 +73,10 @@ export default function Header() {
 					>
 						Начать использовать
 					</CustomButton>
+
+					<Center display={["flex", "flex", "none"]} h="full">
+						<MobileNavigation />
+					</Center>
 				</Stack>
 
 				{/* Центральный блок с абсолютным позиционированием */}
@@ -98,8 +107,8 @@ export default function Header() {
 							<NavigationButton elementId="how">
 								Как это работает?
 							</NavigationButton>
-							<NavigationButton elementId="referral">
-								Реферальная система
+							<NavigationButton elementId="faq">
+								Частые вопросы
 							</NavigationButton>
 						</Stack>
 					</Center>

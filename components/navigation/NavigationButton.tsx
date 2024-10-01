@@ -1,15 +1,19 @@
 import { Center, Text } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 
 export default function NavigationButton({
 	children,
 	elementId,
+	isMobile,
 }: {
 	children: React.ReactNode;
 	elementId: string;
+	isMobile?: boolean;
 }) {
 	const [isActive, setActive] = useState<boolean>(false);
 	const observer = useRef<IntersectionObserver | null>(null);
+	const router = useRouter();
 
 	useEffect(() => {
 		// Получаем элемент, который нужно отслеживать
@@ -39,29 +43,30 @@ export default function NavigationButton({
 				observer.current.unobserve(targetElement);
 			}
 		};
-	}, [elementId]);
+	}, [elementId, router.pathname]);
 
 	const handleScroll = () => {
-		// Скроллим к элементу по клику
-		const targetElement = document.getElementById(elementId);
-		if (targetElement) {
-			targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-		}
+		router.push(`/#${elementId}`);
 	};
 
 	return (
 		<Center
 			cursor={"pointer"}
-			borderRadius={isActive ? "40px" : "40px"}
+			borderRadius={isMobile ? "80px" : "40px"}
 			bgColor={isActive ? "#242424" : "transparent"}
-			p="10px 20px"
+			p={isMobile ? undefined : "10px 20px"}
+			pt={isMobile ? "14px" : undefined}
+			pb={isMobile ? "14px" : undefined}
 			onClick={handleScroll}
 			transitionProperty={
 				"var(--notblocknet-transition-property-common) !important"
 			}
 			transitionDuration={"350ms"}
 		>
-			<Text fontSize={"16px"} opacity={isActive ? "1" : "0.7"}>
+			<Text
+				fontSize={isMobile ? "14px" : "16px"}
+				opacity={isActive ? "1" : "0.7"}
+			>
 				{children}
 			</Text>
 		</Center>

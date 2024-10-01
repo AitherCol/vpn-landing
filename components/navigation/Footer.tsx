@@ -1,8 +1,11 @@
 import { ContentContainer, uncageFont } from "@/pages/_app";
 import { Center, Heading, Image, Link, Stack, Text } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import { getAdaptiveValue, scrollToElement } from "../utils";
 
 export default function Footer() {
+	const router = useRouter();
+
 	return (
 		<ContentContainer>
 			<Center w="full" p={getAdaptiveValue("0px", "0px", "64px")}>
@@ -73,7 +76,7 @@ export default function Footer() {
 									fontWeight={400}
 									opacity={"0.7"}
 									_hover={{ opacity: "1" }}
-									onClick={() => scrollToElement("why")}
+									onClick={() => scrollToElement("why", router)}
 								>
 									Почему мы?
 								</Link>
@@ -83,7 +86,7 @@ export default function Footer() {
 									fontWeight={400}
 									opacity={"0.7"}
 									_hover={{ opacity: "1" }}
-									onClick={() => scrollToElement("features")}
+									onClick={() => scrollToElement("features", router)}
 								>
 									Преимущества
 								</Link>
@@ -98,7 +101,7 @@ export default function Footer() {
 									fontWeight={400}
 									opacity={"0.7"}
 									_hover={{ opacity: "1" }}
-									onClick={() => scrollToElement("how")}
+									onClick={() => scrollToElement("how", router)}
 								>
 									Как это работает?
 								</Link>
@@ -108,7 +111,7 @@ export default function Footer() {
 									fontWeight={400}
 									opacity={"0.7"}
 									_hover={{ opacity: "1" }}
-									onClick={() => scrollToElement("faq")}
+									onClick={() => scrollToElement("faq", router)}
 								>
 									Частые вопросы
 								</Link>
@@ -139,6 +142,9 @@ export default function Footer() {
 									fontWeight={400}
 									opacity={"0.7"}
 									_hover={{ opacity: "1" }}
+									onClick={() => {
+										router.push("/privacy");
+									}}
 								>
 									Политика конфиденциальности
 								</Link>

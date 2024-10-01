@@ -6,8 +6,11 @@ import {
 } from "@/components/utils";
 import { ContentContainer, uncageFont } from "@/pages/_app";
 import { Box, Center, Heading, Stack, Text } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 export default function Cover() {
+	const router = useRouter();
+
 	return (
 		<Box id="main" position="relative" overflow={"hidden"} minH="100vh">
 			<Box
@@ -111,7 +114,7 @@ export default function Cover() {
 							spacing={getAdaptiveValue("16px", "16px", "24px")}
 						>
 							<CustomButton
-								onClick={() => scrollToElement("why")}
+								onClick={() => scrollToElement("why", router)}
 								width={["full", "auto"]}
 							>
 								Узнать подробнее

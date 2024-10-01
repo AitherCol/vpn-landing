@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
 
-button:focus-visible,
-a:focus-visible {
-	box-shadow: none;
+a:focus,
+button:focus {
+	box-shadow: none !important;
+}
+
+* {
+	-webkit-tap-highlight-color: transparent !important;
+	scroll-behavior: smooth;
 }
