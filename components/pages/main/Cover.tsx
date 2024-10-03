@@ -1,9 +1,5 @@
 import CustomButton from "@/components/ui/CustomButton";
-import {
-	getAdaptiveValue,
-	openInNewTab,
-	scrollToElement,
-} from "@/components/utils";
+import { getAdaptiveValue, scrollToElement } from "@/components/utils";
 import { ContentContainer, uncageFont } from "@/pages/_app";
 import { Box, Center, Heading, Stack, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
@@ -122,7 +118,7 @@ export default function Cover() {
 							<CustomButton
 								variant="primary"
 								width={["full", "auto"]}
-								onClick={() => openInNewTab("https://t.me/NotBlockNetBot")}
+								onClick={() => router.push("/welcome")}
 							>
 								Начать использовать
 							</CustomButton>

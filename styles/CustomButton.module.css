@@ -8,7 +8,7 @@
 }
 
 .primary {
-	position: relative;
+	position: relative !important;
 	color: #0f0f0f !important;
 }
 
@@ -19,7 +19,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: linear-gradient(87deg, #bfffff 0%, #83d0cb 100%);
+	background: linear-gradient(87deg, #bfffff 0%, #83d0cb 100%) !important;
 	z-index: -1;
 	transition: opacity 350ms ease !important;
 }

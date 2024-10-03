@@ -2,7 +2,6 @@ import { uncageFont } from "@/pages/_app";
 import { Box, Center, Heading, Image, Stack } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import CustomButton from "../ui/CustomButton";
-import { openInNewTab } from "../utils";
 import MobileNavigation from "./MobileNavigation";
 import NavigationButton from "./NavigationButton";
 
@@ -69,7 +68,7 @@ export default function Header() {
 						]}
 						variant="primary"
 						zIndex={3}
-						onClick={() => openInNewTab("https://t.me/NotBlockNetBot")}
+						onClick={() => router.push("/welcome")}
 					>
 						Начать использовать
 					</CustomButton>
