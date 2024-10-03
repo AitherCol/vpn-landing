@@ -66,9 +66,9 @@ function QuestionComponent({
 							></Box>
 
 							<Heading
-								className={[isExpanded ? styles["question"] : undefined].join(
-									" "
-								)}
+								className={[
+									isExpanded ? styles["question-expanded"] : undefined,
+								].join(" ")}
 								fontSize={getAdaptiveValue("16px", "18px", "24px")}
 								fontWeight={700}
 								lineHeight={"normal"}
