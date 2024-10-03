@@ -108,10 +108,10 @@ export default function Welcome() {
 				display={["none", "block"]}
 			/>
 			<ContentContainer>
-				<Center minH="100svh">
+				<Center minH="100vh" pt={getAdaptiveValue("60px", "60px", "0px")}>
 					<Stack
 						direction={"column"}
-						spacing={getAdaptiveValue("60px", "0px", "0px")}
+						spacing={getAdaptiveValue("32px", "32px", "24px")}
 						textAlign={"center"}
 						alignItems={"center"}
 						position={"relative"}
