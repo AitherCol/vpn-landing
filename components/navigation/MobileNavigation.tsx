@@ -51,6 +51,9 @@ export default function MobileNavigation() {
 					borderRadius={"24px"}
 					p={0}
 					maxW="164px"
+					_focus={{
+						boxShadow: "none!important",
+					}}
 				>
 					<PopoverBody p={"4px"}>
 						<Stack textAlign={"center"} direction={"column"} spacing={0}>
