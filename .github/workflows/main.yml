@@ -15,11 +15,13 @@ jobs:
 
       - name: Run install
         uses: borales/actions-yarn@v4
-        cmd: install
+        with:
+          cmd: install
 
       - name: Run build
         uses: borales/actions-yarn@v4
-        cmd: build
+        with:
+          cmd: build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
